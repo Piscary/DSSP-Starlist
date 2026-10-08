@@ -28,7 +28,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100dvh;
     overflow: hidden;
 }
 
@@ -68,6 +69,7 @@ footer {
     background-color: var(--black);
     color: var(--white);
     justify-content: center;
+    position: static;
 }
 footer p {
     font-style: italic;
