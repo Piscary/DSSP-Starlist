@@ -1,0 +1,234 @@
+:root {
+    --padding: 10px;
+    --margin: 10px;
+    --border-radius: 25px;
+
+    --light: #efefef;
+    --yellow: #FFD369;
+    --mid-black: #222222;
+    --black: black;
+    --white: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#footer-tag {
+    font-style: italic;
+    font-size: small;
+    margin: var(--margin);
+}
+
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    background-color: var(--black);
+    color: var(--yellow);
+    padding: var(--padding);
+}
+header > a {
+    text-decoration: none;
+    font-size: large;
+    color: var(--yellow);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 0;
+    background-color: var(--yellow);
+    overflow: hidden;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--mid-black);
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--black);
+    color: var(--white);
+    justify-content: center;
+}
+footer a {
+    color: var(--yellow);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    border-color: var(--mid-black);
+    padding: var(--padding);
+    margin: var(--margin);
+    font-weight: bold;
+    border: 2px solid var(--mid-black);
+    color: var(--mid-black);
+    font: inherit;
+    background-color: var(--light);
+    box-shadow: 1px 2px var(--mid-black);
+    min-width: 50px;
+    min-height: 50px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--mid-black);
+    color: var(--light);
+}
+.btn.primary {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--mid-black);
+}
+.btn.primary:hover {
+    background-color: var(--mid-black);
+    color: var(--yellow);
+}
+.btn.secondary {
+    background-color: var(--mid-black);
+    color: var(--yellow);
+}
+.btn.secondary:hover {
+    background-color: var(--yellow);
+    color: var(--mid-black);
+}
+
+table {
+    background-color: var(--white);
+    color: var(--mid-black);
+    width: 100%;
+}
+table > thead > tr > th {
+    padding: var(--padding);
+    font-weight: bold;
+}
+table > tbody > tr > td {
+    padding: var(--padding);
+}
+table > tbody > tr:nth-child(odd) {
+    background-color: var(--light);
+}
+
+.tournament_page_container,
+.info_container,
+.tournaments_container,
+.starlist_container {
+    min-height: 150px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.starlist_container > table > tbody > tr > td:nth-child(1),
+.threshold_container > table > tbody > tr > td:nth-child(1),
+.starlist_container > table > tbody > tr > td:nth-child(3),
+.starlist_container > table > tbody > tr > td:nth-child(4),
+.starlist_container > table > tbody > tr > td:nth-child(5)
+{
+    text-align: center;
+}
+
+.tournaments_container > table > tbody > tr > td:nth-child(2) > a,
+.tournament_page_container > table > tbody > tr > td:nth-child(2) > a,
+.starlist_container > table > tbody > tr > td:nth-child(2) > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--mid-black);
+    cursor: pointer;
+}
+.tournaments_container > table > tbody > tr > td:nth-child(2) > a:hover,
+.tournament_page_container > table > tbody > tr > td:nth-child(2) > a:hover,
+.starlist_container > table > tbody > tr > td:nth-child(2) > a:hover {
+    text-shadow: 1px 2px var(--yellow);
+}
+
+.player_stars,
+.threshold_container > table > tbody > tr > td:nth-child(1),
+.starlist_container > table > tbody > tr > td:nth-child(5) {
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-shadow: 1px 2px var(--mid-black);
+    color: var(--white);
+}
+
+.player_stars > b,
+.threshold_container > table > tbody > tr > td:nth-child(1) > b,
+.starlist_container > table > tbody > tr > td:nth-child(5) > b {
+    color: var(--yellow);
+}
+
+.player_info {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--mid-black);
+    padding: var(--padding);
+    align-items: center;
+}
+.player_name {
+    color: var(--yellow);
+    font-size: x-large;
+}
+.player_stars {
+    font-size: xx-large;
+}
+.player_title {
+    font-size: large;
+    color: var(--white);
+}
+.card_container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding);
+    background-color: var(--light);
+    padding: var(--padding);
+    justify-content: center;
+}
+.card {
+    background-color: var(--white);
+    padding: var(--padding);
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding);
+}
+.card > a {
+    text-decoration: none;
+    color: var(--mid-black);
+}
+.tournaments_container {
+    background-color: var(--white);
+}
+.info_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    gap: calc(var(--padding) * 2);
+    padding: var(--padding);
+    color: var(--mid-black);
+}
+.filler {
+    flex-grow: 1;
+    background-color: var(--white);
+}
